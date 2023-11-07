@@ -110,65 +110,42 @@ header {
 .about .about-text img {
   width: 60%;
 }
-.room-types {
+.room-types-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px;
 }
-.deluxe-room {
-  position: relative;
+.room-item {
   text-align: center;
-}
-.deluxe-room:hover .overlay {
-  width: 100%;
-  left: 0;
-}
-.superior-room {
+  overflow: hidden;
   position: relative;
-  text-align: center;
 }
-.superior-room:hover .overlay {
-  width: 100%;
-  left: 0;
-}
-.signature-room {
-  position: relative;
-  text-align: center;
-}
-.ignature-room:hover .overlay {
-  width: 100%;
-  left: 0;
-}
-.luxury-room {
-  position: relative;
-  text-align: center;
-}
-.luxury-room:hover .overlay {
-  width: 100%;
-  left: 0;
-}
-.room-type-info-text {
+.room-item .room-item-info {
+  transform: translateX(100%);
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.5;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.8s ease-in-out;
   color: white;
   line-height: 4em;
-  overflow: hidden;
   background-color: #444446;
-  transition: 0.5s ease;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
 }
-.room-type-info-text h1 {
+.room-item .room-item-info h1 {
   font-size: 3em;
 }
-.room-type-info-text h3 {
+.room-item .room-item-info h3 {
   font-size: 2em;
 }
-.room-type-info-text button {
+.room-item .room-item-info button {
   margin-top: 20px;
   width: 200px;
   background-color: transparent;
@@ -178,6 +155,9 @@ header {
   padding-bottom: 15px;
   font-weight: bold;
   word-spacing: 1px;
+}
+.room-item:hover .room-item-info {
+  transform: translateX(0);
 }
 .discover h1 {
   text-align: center;
@@ -217,7 +197,7 @@ header {
   width: 33.33%;
 }
 .promotion {
-  height: 80%;
+  height: 60%;
 }
 .promotion h1 {
   text-align: center;
@@ -231,6 +211,10 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.8;
+}
+.promotion img:hover {
+  opacity: 1;
 }
 .promotion-images {
   display: flex;
@@ -282,9 +266,9 @@ header {
   padding: 40px;
   box-sizing: border-box;
   display: grid;
-  grid-template-areas: 'txt img1 img2' 'txt img1 img3';
+  grid-template-areas: "txt img1 img2" "txt img1 img3";
   gap: 30px;
-  background-color: #0F172B;
+  background-color: #0f172b;
   color: white;
 }
 .comment-brochure .comment-texts {
