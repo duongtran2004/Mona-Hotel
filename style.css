@@ -59,6 +59,9 @@ header {
   display: inline;
   margin-right: 20px;
 }
+.nav-bar-button {
+  visibility: hidden;
+}
 .banner-text {
   position: absolute;
   bottom: 50%;
@@ -180,7 +183,10 @@ header {
 .discover .discover-text p1 {
   font-weight: bold;
 }
-.discover .discover-text button {
+.discover .discover-button-container {
+  padding-left: 5%;
+}
+.discover button {
   width: 200px;
   background-color: transparent;
   border: solid black 2px;
@@ -188,6 +194,10 @@ header {
   font-weight: bold;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+.discover button:hover {
+  background-color: black;
+  color: white;
 }
 .discover-images {
   display: flex;
@@ -339,5 +349,183 @@ header {
   text-align: center;
   letter-spacing: 1px;
   word-spacing: 1px;
+}
+@media (max-width: 576px) {
+  .mobile-horizontal-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-headers h1 {
+    font-size: 20px;
+  }
+  .mobile-headers h3 {
+    font-size: 13px;
+  }
+  .nav-bar ul {
+    visibility: hidden;
+  }
+  .nav-bar .nav-bar-button {
+    visibility: visible;
+    padding-right: 50px;
+  }
+  .logo-header {
+    width: 60px;
+  }
+  .banner-text {
+    bottom: 10%;
+  }
+  .banner-text h1 {
+    font-size: 2em;
+  }
+  .banner-text p {
+    font-size: 1em;
+  }
+  .banner-text button {
+    width: 150px;
+    padding: 8px 0;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about .about-text {
+    padding-left: 0;
+  }
+  .about .about-text h1 {
+    font-size: 18px;
+  }
+  .about .about-text p {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 20px;
+    word-spacing: 1px;
+    text-align: justify;
+  }
+  .about .about-text img {
+    width: 150px;
+  }
+  .about .about-images {
+    order: -1;
+  }
+  .room-item .room-item-info {
+    line-height: 2em;
+  }
+  .room-item .room-item-info h1 {
+    font-size: 20px;
+  }
+  .room-item .room-item-info h3 {
+    font-size: 13px;
+  }
+  .room-item .room-item-info button {
+    width: 120px;
+    padding: 8px 0;
+    font-size: 9px;
+  }
+  .discover .discover-heading h1 {
+    font-size: 20px;
+  }
+  .discover .discover-heading h3 {
+    font-size: 13px;
+  }
+  .discover .discover-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .discover .discover-text p1,
+  .discover .discover-text p2 {
+    font-size: 13px;
+  }
+  .discover .discover-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .discover .discover-images img {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .promotion h1 {
+    font-size: 20px;
+  }
+  .promotion h3 {
+    font-size: 13px;
+  }
+  .promotion .promotion-images {
+    display: flex;
+    flex-direction: column;
+  }
+  .promotion .promotion-images .promotion1 {
+    width: 100%;
+  }
+  .promotion .promotion-images .promotion2 {
+    width: 100%;
+  }
+  .promotion .promotion-images .promotion3 {
+    width: 100%;
+  }
+  .promotion .promotion-images img {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .promotion .promotion-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .comment h1 {
+    font-size: 20px;
+  }
+  .comment h3 {
+    font-size: 13px;
+  }
+  .comment .comment-brochure {
+    display: flex;
+    flex-direction: column;
+  }
+  .comment .comment-brochure button {
+    width: 150px;
+    padding: 8px 0;
+    font-size: 9px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer .footer-logo {
+    width: 100px;
+  }
+  footer .footer-logo img {
+    width: 100%;
+  }
+  footer .footer-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+  footer .footer-layout .address {
+    font-size: 12px;
+    padding-bottom: 40px;
+  }
+  footer .footer-layout .contact-info {
+    padding-bottom: 40px;
+  }
+  footer .footer-layout .contact-info h6 {
+    font-size: 12px;
+  }
+  footer .footer-layout .receive-news {
+    font-size: 12px;
+    padding-bottom: 40px;
+  }
+  footer .footer-layout .prizes {
+    padding-bottom: 40px;
+  }
+  footer .copyright {
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
 }
 /*# sourceMappingURL=./style.css.map */

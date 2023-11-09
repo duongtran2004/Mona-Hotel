@@ -2,15 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Meta viewport  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mona Hotel Clone</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <!-- 1. Còn thiếu hover ở phần giá phòng (làm xám phông, hiện div giá) và ưu đãi đặc
   biệt (mặc định thì màu ảnh xám hơn, hover cursor vào thì màu ảnh xám hơn) 
 2. Khuyến mãi 3 ngày 2 đêm đang ko đồng đều vs 2 ảnh còn lại-->
-  <!-- 3. Đoạn văn khách sạn sang trọng nhất thành phố bị dài quá, cho ngắn lại -->
+  <!-- 3. Đoạn văn khách sạn sang trọng nhất thành phố bị dài quá, cho ngắn lại -->`
   <!-- Ko chỉnh được height của promotion image (ảnh phần ưu đãi đặc biệt) -->
   <body>
     <header>
@@ -32,6 +37,9 @@
 
           <li>LIÊN HỆ</li>
         </ul>
+        <div class="nav-bar-button">
+          <i class="fa fa-bars"></i>
+        </div>
       </section>
 
       <div class="banner-text">
@@ -125,11 +133,14 @@
         </div>
       </section>
       <section class="discover">
-        <br />
-        <h1>Không gian sống đỉnh cao</h1>
-        <br />
-        <h3>TẠI HỒ CHÍ MINH</h3>
-        <br />
+        <div class="discover-heading">
+          <br />
+          <h1>Không gian sống đỉnh cao</h1>
+          <br />
+          <h3>TẠI HỒ CHÍ MINH</h3>
+          <br />
+        </div>
+
         <div class="discover-text">
           <div>
             <p1>
@@ -140,9 +151,7 @@
               mại lớn của Việt Nam.
             </p1>
             <br /><br />
-            <br />
-            <button class="discover-button">KHÁM PHÁ THÊM</button>
-            <br />
+
             <br />
             <br />
           </div>
@@ -157,7 +166,11 @@
             </p2>
           </div>
         </div>
-
+        <br />
+        <div class="discover-button-container">
+          <button class="discover-button">KHÁM PHÁ THÊM</button>
+        </div>
+        <br />
         <div class="discover-images">
           <img src="assets/explore1.jpg" alt="explore1" />
           <img src="assets/explore2.jpg" alt="explore2" />
@@ -245,7 +258,7 @@
       </div>
       <br /><br />
       <div class="footer-layout">
-        <div class="adrress">
+        <div class="address">
           <h3>ĐỊA CHỈ</h3>
           <br />
           <p><b>HOTEL Mona Beach</b></p>

@@ -74,6 +74,9 @@ header {
     margin-right: 20px;
   }
 }
+.nav-bar-button {
+  visibility: hidden;
+}
 .banner-text {
   position: absolute;
 
@@ -216,16 +219,22 @@ header {
     p1 {
       font-weight: bold;
     }
-
-    button {
-      width: 200px;
-      background-color: transparent;
-      border: solid black 2px;
-      color: black;
-      font-weight: bold;
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
+  }
+  .discover-button-container {
+    padding-left: 5%;
+  }
+  button {
+    width: 200px;
+    background-color: transparent;
+    border: solid black 2px;
+    color: black;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  button:hover {
+    background-color: black;
+    color: white;
   }
 }
 .discover-images {
@@ -386,4 +395,215 @@ header {
   text-align: center;
   letter-spacing: 1px;
   word-spacing: 1px;
+}
+
+// RESPONSIVENESS/MEDIA QUERIES FOR DIFFERENT SCREENSIZE
+// Mobile
+@media (max-width: 576px) {
+  //MIXIN
+  //mobile flex horizontally
+  .mobile-horizontal-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  //mobile heading style
+  .mobile-headers {
+    h1 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 13px;
+    }
+  }
+  //HEADER
+  //nav bar options hide
+  .nav-bar {
+    ul {
+      visibility: hidden;
+    }
+    .nav-bar-button {
+      visibility: visible;
+      padding-right: 50px;
+    }
+  }
+
+  //include symbol button to open nav-bar
+  //make header logo bigger
+  .logo-header {
+    width: 60px;
+  }
+  //make slider text and buttons smaller
+  .banner-text {
+    bottom: 10%;
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1em;
+    }
+    button {
+      width: 150px;
+      padding: 8px 0;
+    }
+  }
+
+  //ABOUT
+
+  //about flex horizontally
+
+  .about {
+    .mobile-horizontal-flex;
+    .about-text {
+      padding-left: 0;
+      h1 {
+        font-size: 18px;
+      }
+      p {
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 20px;
+        word-spacing: 1px;
+        text-align: justify;
+      }
+      img {
+        width: 150px;
+      }
+    }
+    //change order: pictures go first
+    .about-images {
+      order: -1;
+    }
+  }
+  //ROOM CATAGORIES
+  //make the overlay text smaller
+  .room-item {
+    .room-item-info {
+      line-height: 2em;
+      h1 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 13px;
+      }
+      button {
+        width: 120px;
+        padding: 8px 0;
+        font-size: 9px;
+      }
+    }
+  }
+  //DISCOVER
+  .discover {
+    .discover-heading {
+      .mobile-headers;
+    }
+    //discover text horizontally
+    .discover-text {
+      .mobile-horizontal-flex;
+      p1,
+      p2 {
+        font-size: 13px;
+      }
+    }
+    .discover-images {
+      .mobile-horizontal-flex;
+
+      align-items: center;
+      img {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+  }
+
+  //PROMOTION
+  .promotion {
+    .mobile-headers;
+    .promotion-images {
+      .mobile-horizontal-flex;
+      .promotion1 {
+        width: 100%;
+      }
+      .promotion2 {
+        width: 100%;
+      }
+      .promotion3 {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+    .promotion-text {
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  //COMMENT
+  .comment {
+    .mobile-headers;
+    .comment-brochure {
+      .mobile-horizontal-flex;
+      button {
+        width: 150px;
+        padding: 8px 0;
+        font-size: 9px;
+      }
+    }
+  }
+
+  //FOOTER
+  footer {
+    .mobile-horizontal-flex;
+    align-items: center;
+    text-align: center;
+
+    .footer-logo {
+      width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+    .footer-layout {
+      .mobile-horizontal-flex;
+      align-items: center;
+      font-size: 12px;
+      .address {
+        font-size: 12px;
+        padding-bottom: 40px;
+      }
+      .contact-info {
+        h6 {
+          font-size: 12px;
+        }
+        padding-bottom: 40px;
+      }
+      .receive-news {
+        font-size: 12px;
+        padding-bottom: 40px;
+      }
+      .prizes {
+        padding-bottom: 40px;
+      }
+    }
+    .copyright {
+      font-size: 16px;
+      padding-bottom: 40px;
+    }
+  }
+
+  //footer image horizontally, one per line
+}
+
+// Tablet (Ipad)
+@media (max-width: 768px) {
+}
+// Desktop (not Laptop) maybe no need cause it is the normal state of CSS
+@media (max-width: 1200px) {
 }
