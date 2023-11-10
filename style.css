@@ -528,4 +528,104 @@ header {
     padding-bottom: 40px;
   }
 }
+@media (max-width: 768px) {
+  .tablet-horizontal-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .tablet-headers h1 {
+    font-size: 35px;
+  }
+  .tablet-headers h3 {
+    font-size: 15px;
+  }
+  .nav-bar ul {
+    visibility: hidden;
+  }
+  .nav-bar .nav-bar-button {
+    visibility: visible;
+    padding-right: 50px;
+  }
+  .logo-header {
+    width: 80px;
+  }
+  .banner-text {
+    bottom: 10%;
+  }
+  .banner-text h1 {
+    font-size: 2em;
+  }
+  .banner-text p {
+    font-size: 1em;
+  }
+  .banner-text button {
+    width: 150px;
+    padding: 8px 0;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about .about-text {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  .about .about-text h1 {
+    font-size: 35px;
+  }
+  .about .about-text p {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 30px;
+    word-spacing: 1px;
+  }
+  .about .about-text img {
+    width: 150px;
+  }
+  .about .about-images {
+    order: -1;
+  }
+  .discover .discover-heading h1 {
+    font-size: 35px;
+  }
+  .discover .discover-heading h3 {
+    font-size: 15px;
+  }
+  .discover .discover-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .comment h1 {
+    font-size: 35px;
+  }
+  .comment h3 {
+    font-size: 15px;
+  }
+  .comment .comment-brochure {
+    grid-template-areas: "txt txt txt" "txt txt txt" "img1 img2 img3";
+  }
+  .comment .comment-brochure .comment-text-1 {
+    line-height: 50px;
+    font-size: 38px;
+  }
+  .comment .comment-brochure .comment-text-2 {
+    line-height: 30px;
+    font-size: 20px;
+  }
+  .comment button {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .comment img {
+    height: 100%;
+  }
+  footer .footer-logo {
+    width: 150px;
+    margin: auto;
+  }
+  footer .footer-logo img {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=./style.css.map */

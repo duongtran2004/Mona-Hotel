@@ -597,13 +597,131 @@ header {
       padding-bottom: 40px;
     }
   }
-
-  //footer image horizontally, one per line
 }
 
 // Tablet (Ipad)
 @media (max-width: 768px) {
-}
-// Desktop (not Laptop) maybe no need cause it is the normal state of CSS
-@media (max-width: 1200px) {
+  //MIXIN
+  //tablet flex horizontally
+  .tablet-horizontal-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  //tablet heading style
+
+  .tablet-headers {
+    h1 {
+      font-size: 35px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+  }
+
+  //HEADER
+  //nav bar options hide
+  .nav-bar {
+    ul {
+      visibility: hidden;
+    }
+    .nav-bar-button {
+      visibility: visible;
+      padding-right: 50px;
+    }
+  }
+
+  //include symbol button to open nav-bar
+  //make header logo bigger
+  .logo-header {
+    width: 80px;
+  }
+  //make slider text and buttons smaller
+  .banner-text {
+    bottom: 10%;
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1em;
+    }
+    button {
+      width: 150px;
+      padding: 8px 0;
+    }
+  }
+
+  //ABOUT
+
+  //about flex horizontally
+
+  .about {
+    .tablet-horizontal-flex;
+    .about-text {
+      padding-left: 0;
+      padding-top: 20px;
+      h1 {
+        font-size: 35px;
+      }
+      p {
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 30px;
+        word-spacing: 1px;
+      }
+      img {
+        width: 150px;
+      }
+    }
+    //change order: pictures go first
+    .about-images {
+      order: -1;
+    }
+  }
+  //DISCOVER
+  .discover {
+    .discover-heading {
+      .tablet-headers;
+    }
+    .discover-text {
+      .tablet-horizontal-flex;
+    }
+  }
+
+  //COMMENT
+  .comment {
+    .tablet-headers;
+    .comment-brochure {
+      grid-template-areas:
+        "txt txt txt"
+        "txt txt txt"
+        "img1 img2 img3";
+      .comment-text-1 {
+        line-height: 50px;
+        font-size: 38px;
+      }
+      .comment-text-2 {
+        line-height: 30px;
+        font-size: 20px;
+      }
+    }
+    button {
+      width: 200px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    img {
+      height: 100%;
+    }
+  }
+  //FOOTER
+  footer {
+    .footer-logo {
+      width: 150px;
+      margin: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
